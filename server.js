@@ -30,16 +30,20 @@ app.use((req,res,next)=>{
 app.use(express.static('public'));
 
 
-
 app.get('/',(req,res)=>{
-    res.send('hello express');
+    res.render('home',{
+        content:'welcome to my website',
+        title:'home',
+        currentyear: new Date().getFullYear(),
+    });
 });
 
 
 app.get('/about',(req,res)=>{
     res.render('about',{
         content:'welcome to my website',
-        title:'About'
+        title:'About',
+        currentyear: new Date().getFullYear(),
     });
 });
 
