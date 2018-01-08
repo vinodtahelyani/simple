@@ -56,6 +56,6 @@ app.get('/help',(req,res)=>{
     });
 });
 
-app.listen(port,'localhost',()=>{
+app.listen(port,()=>{
     console.log(`server is running on ${port}`);
 });
